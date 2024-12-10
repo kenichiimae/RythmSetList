@@ -6,27 +6,9 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		8BCF9CE82D07B7240043B12B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8BCF9CC42D07B71F0043B12B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8BCF9CCB2D07B71F0043B12B;
-			remoteInfo = RythmSetList;
-		};
-		8BCF9CF22D07B7240043B12B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8BCF9CC42D07B71F0043B12B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8BCF9CCB2D07B71F0043B12B;
-			remoteInfo = RythmSetList;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		8BCF9CCC2D07B71F0043B12B /* RythmSetList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RythmSetList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BCF9CE72D07B7240043B12B /* RythmSetListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RythmSetListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BCF9CF12D07B7240043B12B /* RythmSetListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RythmSetListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BCF9D302D07E1920043B12B /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -48,34 +30,10 @@
 			path = RythmSetList;
 			sourceTree = "<group>";
 		};
-		8BCF9CEA2D07B7240043B12B /* RythmSetListTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RythmSetListTests;
-			sourceTree = "<group>";
-		};
-		8BCF9CF42D07B7240043B12B /* RythmSetListUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RythmSetListUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8BCF9CC92D07B71F0043B12B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8BCF9CE42D07B7240043B12B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8BCF9CEE2D07B7240043B12B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -88,10 +46,9 @@
 		8BCF9CC32D07B71F0043B12B = {
 			isa = PBXGroup;
 			children = (
-				8BCF9CCE2D07B71F0043B12B /* RythmSetList */,
-				8BCF9CEA2D07B7240043B12B /* RythmSetListTests */,
-				8BCF9CF42D07B7240043B12B /* RythmSetListUITests */,
+				8BCF9D302D07E1920043B12B /* Constants.h */,
 				8BCF9CCD2D07B71F0043B12B /* Products */,
+				8BCF9CCE2D07B71F0043B12B /* RythmSetList */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,8 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				8BCF9CCC2D07B71F0043B12B /* RythmSetList.app */,
-				8BCF9CE72D07B7240043B12B /* RythmSetListTests.xctest */,
-				8BCF9CF12D07B7240043B12B /* RythmSetListUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,52 +85,6 @@
 			productReference = 8BCF9CCC2D07B71F0043B12B /* RythmSetList.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8BCF9CE62D07B7240043B12B /* RythmSetListTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8BCF9CFF2D07B7240043B12B /* Build configuration list for PBXNativeTarget "RythmSetListTests" */;
-			buildPhases = (
-				8BCF9CE32D07B7240043B12B /* Sources */,
-				8BCF9CE42D07B7240043B12B /* Frameworks */,
-				8BCF9CE52D07B7240043B12B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8BCF9CE92D07B7240043B12B /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				8BCF9CEA2D07B7240043B12B /* RythmSetListTests */,
-			);
-			name = RythmSetListTests;
-			packageProductDependencies = (
-			);
-			productName = RythmSetListTests;
-			productReference = 8BCF9CE72D07B7240043B12B /* RythmSetListTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		8BCF9CF02D07B7240043B12B /* RythmSetListUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8BCF9D022D07B7240043B12B /* Build configuration list for PBXNativeTarget "RythmSetListUITests" */;
-			buildPhases = (
-				8BCF9CED2D07B7240043B12B /* Sources */,
-				8BCF9CEE2D07B7240043B12B /* Frameworks */,
-				8BCF9CEF2D07B7240043B12B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8BCF9CF32D07B7240043B12B /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				8BCF9CF42D07B7240043B12B /* RythmSetListUITests */,
-			);
-			name = RythmSetListUITests;
-			packageProductDependencies = (
-			);
-			productName = RythmSetListUITests;
-			productReference = 8BCF9CF12D07B7240043B12B /* RythmSetListUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -187,14 +96,7 @@
 				TargetAttributes = {
 					8BCF9CCB2D07B71F0043B12B = {
 						CreatedOnToolsVersion = 16.1;
-					};
-					8BCF9CE62D07B7240043B12B = {
-						CreatedOnToolsVersion = 16.1;
-						TestTargetID = 8BCF9CCB2D07B71F0043B12B;
-					};
-					8BCF9CF02D07B7240043B12B = {
-						CreatedOnToolsVersion = 16.1;
-						TestTargetID = 8BCF9CCB2D07B71F0043B12B;
+						LastSwiftMigration = 1610;
 					};
 				};
 			};
@@ -204,6 +106,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 8BCF9CC32D07B71F0043B12B;
 			minimizedProjectReferenceProxies = 1;
@@ -213,28 +116,12 @@
 			projectRoot = "";
 			targets = (
 				8BCF9CCB2D07B71F0043B12B /* RythmSetList */,
-				8BCF9CE62D07B7240043B12B /* RythmSetListTests */,
-				8BCF9CF02D07B7240043B12B /* RythmSetListUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8BCF9CCA2D07B71F0043B12B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8BCF9CE52D07B7240043B12B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8BCF9CEF2D07B7240043B12B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,34 +138,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8BCF9CE32D07B7240043B12B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8BCF9CED2D07B7240043B12B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8BCF9CE92D07B7240043B12B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8BCF9CCB2D07B71F0043B12B /* RythmSetList */;
-			targetProxy = 8BCF9CE82D07B7240043B12B /* PBXContainerItemProxy */;
-		};
-		8BCF9CF32D07B7240043B12B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8BCF9CCB2D07B71F0043B12B /* RythmSetList */;
-			targetProxy = 8BCF9CF22D07B7240043B12B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8BCF9CFB2D07B7240043B12B /* Debug */ = {
@@ -286,6 +146,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7HBANFXC65;
@@ -304,6 +165,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brosSoft.RythmSetList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -313,6 +176,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7HBANFXC65;
@@ -331,6 +195,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brosSoft.RythmSetList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -340,6 +205,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -401,6 +267,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -451,74 +318,6 @@
 			};
 			name = Release;
 		};
-		8BCF9D002D07B7240043B12B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7HBANFXC65;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brosSoft.RythmSetListTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RythmSetList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RythmSetList";
-			};
-			name = Debug;
-		};
-		8BCF9D012D07B7240043B12B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7HBANFXC65;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brosSoft.RythmSetListTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RythmSetList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RythmSetList";
-			};
-			name = Release;
-		};
-		8BCF9D032D07B7240043B12B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7HBANFXC65;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brosSoft.RythmSetListUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RythmSetList;
-			};
-			name = Debug;
-		};
-		8BCF9D042D07B7240043B12B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7HBANFXC65;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brosSoft.RythmSetListUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RythmSetList;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -536,24 +335,6 @@
 			buildConfigurations = (
 				8BCF9CFB2D07B7240043B12B /* Debug */,
 				8BCF9CFC2D07B7240043B12B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8BCF9CFF2D07B7240043B12B /* Build configuration list for PBXNativeTarget "RythmSetListTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8BCF9D002D07B7240043B12B /* Debug */,
-				8BCF9D012D07B7240043B12B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8BCF9D022D07B7240043B12B /* Build configuration list for PBXNativeTarget "RythmSetListUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8BCF9D032D07B7240043B12B /* Debug */,
-				8BCF9D042D07B7240043B12B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

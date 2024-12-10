@@ -6,8 +6,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class ViewController;
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    NSString *dbpath;
+}
+
+@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) ViewController *viewController;
+
+@property (copy, nonatomic) NSString *dbpath;
 
 
 @end

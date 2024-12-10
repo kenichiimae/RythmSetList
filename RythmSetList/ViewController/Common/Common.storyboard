@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Text View Controller-->
+        <scene sceneID="NCA-aa-Kxj">
+            <objects>
+                <viewController storyboardIdentifier="EditTextViewController" id="WqE-fI-UJW" customClass="EditTextViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bef-KF-Eq7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6R-HW-vJM">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kvf-Ue-wlp">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="59"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4i-K2-jtG">
+                                <rect key="frame" x="20" y="79" width="353" height="249"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="定型文章" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqx-SQ-kK1">
+                                        <rect key="frame" x="20" y="21" width="313" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="JE3-rd-DpU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="グループ名を記入してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uSg-l2-2zi">
+                                        <rect key="frame" x="20" y="50" width="313" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Ae2-gY-3Vf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="finishEditSingle:" destination="WqE-fI-UJW" eventType="editingDidEndOnExit" id="HZl-dU-Aqk"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLS-qA-kxg">
+                                        <rect key="frame" x="20" y="183" width="313" height="46"/>
+                                        <color key="backgroundColor" red="0.31372549020000001" green="0.71372549019999998" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="5g1-I2-8CB"/>
+                                        </constraints>
+                                        <state key="normal" title="登録または更新">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="decideText:" destination="WqE-fI-UJW" eventType="touchUpInside" id="Buv-um-Rcb"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="定型文章" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7h-ay-lG3">
+                                        <rect key="frame" x="20" y="100" width="313" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="a2n-5y-Mc7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="グループ名を記入してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vqi-NK-4uf">
+                                        <rect key="frame" x="20" y="129" width="313" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="0Qx-XK-V80"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="finishEditSingle:" destination="WqE-fI-UJW" eventType="editingDidEndOnExit" id="fyq-Sa-Vrv"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="QLS-qA-kxg" secondAttribute="bottom" constant="20" id="4aE-OU-2eL"/>
+                                    <constraint firstItem="QLS-qA-kxg" firstAttribute="leading" secondItem="f4i-K2-jtG" secondAttribute="leading" constant="20" id="GoC-Mc-FLx"/>
+                                    <constraint firstItem="uSg-l2-2zi" firstAttribute="leading" secondItem="f4i-K2-jtG" secondAttribute="leading" constant="20" id="Hlf-WK-rpi"/>
+                                    <constraint firstItem="Vqi-NK-4uf" firstAttribute="leading" secondItem="f4i-K2-jtG" secondAttribute="leading" constant="20" id="Ksw-QP-5Lk"/>
+                                    <constraint firstItem="aqx-SQ-kK1" firstAttribute="top" secondItem="f4i-K2-jtG" secondAttribute="top" constant="21" id="Q83-G4-qec"/>
+                                    <constraint firstItem="u7h-ay-lG3" firstAttribute="leading" secondItem="f4i-K2-jtG" secondAttribute="leading" constant="20" id="azo-50-J95"/>
+                                    <constraint firstAttribute="trailing" secondItem="u7h-ay-lG3" secondAttribute="trailing" constant="20" id="ctc-8Q-4id"/>
+                                    <constraint firstAttribute="trailing" secondItem="aqx-SQ-kK1" secondAttribute="trailing" constant="20" id="dSr-Nr-WvU"/>
+                                    <constraint firstItem="uSg-l2-2zi" firstAttribute="top" secondItem="aqx-SQ-kK1" secondAttribute="bottom" constant="12" id="gS3-Fh-Yu9"/>
+                                    <constraint firstItem="Vqi-NK-4uf" firstAttribute="top" secondItem="u7h-ay-lG3" secondAttribute="bottom" constant="12" id="hXo-bz-48G"/>
+                                    <constraint firstAttribute="trailing" secondItem="uSg-l2-2zi" secondAttribute="trailing" constant="20" id="isK-23-Xgp"/>
+                                    <constraint firstItem="aqx-SQ-kK1" firstAttribute="leading" secondItem="f4i-K2-jtG" secondAttribute="leading" constant="20" id="j4X-7r-TAS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vqi-NK-4uf" secondAttribute="trailing" constant="20" id="jus-b8-VsE"/>
+                                    <constraint firstItem="QLS-qA-kxg" firstAttribute="top" secondItem="Vqi-NK-4uf" secondAttribute="bottom" constant="20" id="soA-f5-WQU"/>
+                                    <constraint firstAttribute="trailing" secondItem="QLS-qA-kxg" secondAttribute="trailing" constant="20" id="u8J-0o-z0i"/>
+                                    <constraint firstItem="u7h-ay-lG3" firstAttribute="top" secondItem="uSg-l2-2zi" secondAttribute="bottom" constant="16" id="uSa-CT-ME6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3cd-CF-Kl7"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="D6R-HW-vJM" firstAttribute="leading" secondItem="3cd-CF-Kl7" secondAttribute="leading" id="9MM-JI-GVK"/>
+                            <constraint firstItem="D6R-HW-vJM" firstAttribute="top" secondItem="bef-KF-Eq7" secondAttribute="top" id="DqL-vJ-3Ne"/>
+                            <constraint firstItem="f4i-K2-jtG" firstAttribute="top" secondItem="Kvf-Ue-wlp" secondAttribute="bottom" constant="20" id="Ewu-Iu-bjo"/>
+                            <constraint firstItem="Kvf-Ue-wlp" firstAttribute="top" secondItem="bef-KF-Eq7" secondAttribute="top" id="O1t-u1-BJI"/>
+                            <constraint firstItem="Kvf-Ue-wlp" firstAttribute="leading" secondItem="3cd-CF-Kl7" secondAttribute="leading" id="P3z-vF-kPC"/>
+                            <constraint firstItem="f4i-K2-jtG" firstAttribute="leading" secondItem="3cd-CF-Kl7" secondAttribute="leading" constant="20" id="Sx7-Nk-KqD"/>
+                            <constraint firstItem="3cd-CF-Kl7" firstAttribute="trailing" secondItem="Kvf-Ue-wlp" secondAttribute="trailing" id="ZU3-AF-WcN"/>
+                            <constraint firstItem="f4i-K2-jtG" firstAttribute="top" secondItem="3cd-CF-Kl7" secondAttribute="top" constant="20" id="fGz-bZ-fKu"/>
+                            <constraint firstItem="3cd-CF-Kl7" firstAttribute="trailing" secondItem="f4i-K2-jtG" secondAttribute="trailing" constant="20" id="mWb-Kl-PvV"/>
+                            <constraint firstItem="D6R-HW-vJM" firstAttribute="trailing" secondItem="3cd-CF-Kl7" secondAttribute="trailing" id="otm-DI-Yia"/>
+                            <constraint firstAttribute="bottom" secondItem="D6R-HW-vJM" secondAttribute="bottom" id="wSg-vd-OK2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnRegister" destination="QLS-qA-kxg" id="duu-up-BSM"/>
+                        <outlet property="lblTitle" destination="aqx-SQ-kK1" id="JqJ-0V-nxv"/>
+                        <outlet property="txtSingle" destination="uSg-l2-2zi" id="hEO-aL-fIj"/>
+                        <outlet property="viewMain" destination="f4i-K2-jtG" id="v5v-Mw-vdg"/>
+                        <outlet property="viewTopSafeSpace" destination="Kvf-Ue-wlp" id="uWo-HC-R7y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UYa-Zh-Adk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="3"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
