@@ -7,6 +7,7 @@
 //
 
 #import "DataRhythm.h"
+#import "AppDelegate.h"
 
 static sqlite3_stmt *init_statement = nil;
 static sqlite3_stmt *delete_statement = nil;
@@ -93,6 +94,97 @@ static sqlite3_stmt *delete_statement = nil;
     if (success != SQLITE_DONE) {
         NSAssert1(0, @"Error: failed to delete from database with message '%s'.", sqlite3_errmsg(database));
     }
+}
+
+#pragma mark -
+#pragma mark リスト取得
+- (NSMutableArray *)getSongList{
+    AppDelegate *applicationDelegate;
+    applicationDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+    NSMutableArray *bookArray1 = [[NSMutableArray alloc] init];
+    sqlite3 *database;
+    if (sqlite3_open([applicationDelegate.dbpath UTF8String], &database) == SQLITE_OK) {
+        // Get the primary key for all books.
+        int primaryKey;
+        const char *sql = "SELECT int_RhythmID FROM data_Rhythm ORDER BY int_SortOrder";
+        sqlite3_stmt *statement;
+        if (sqlite3_prepare_v2(database, sql, -1, &statement, NULL) != SQLITE_OK) {
+            NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
+        }
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            primaryKey = sqlite3_column_int(statement, 0);
+            DataRhythm *cDts = [[DataRhythm alloc] initWithPrimaryKey:primaryKey database:database withAllType:0];
+            [bookArray1 addObject:cDts];
+            [DataRhythm finalizeStatements];
+        }
+        // "Finalize" the statement - releases the resources associated with the statement.
+        sqlite3_finalize(statement);
+    } else {
+        // Even though the open failed, call close to properly clean up resources.
+        NSAssert1(0, @"Failed to open database with message '%s'.", sqlite3_errmsg(database));
+        // Additional error handling, as appropriate...
+    }
+    sqlite3_close(database);
+    
+    applicationDelegate = nil;
+
+    return bookArray1;
+}
+
+- (void)addItemWithTempo:(int)intTempo andTitle:(NSString *)strTitle{
+    AppDelegate *applicationDelegate;
+    applicationDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    sqlite3 *database;
+    sqlite3_stmt *statement = nil;
+    if (sqlite3_open([applicationDelegate.dbpath UTF8String], &database) == SQLITE_OK) {
+        const char *sql;
+        char *sqlStr="";
+        int maxID=0;
+        sqlStr= "SELECT MAX(int_RhythmID) FROM data_Rhythm;";
+        if(sqlite3_prepare_v2(database, sqlStr, -1, &statement, NULL) == SQLITE_OK) {
+            int result = sqlite3_step(statement);
+            if(result == SQLITE_ROW){
+                maxID = sqlite3_column_int(statement, 0);
+            }else{
+                maxID = 0;
+            }
+        }
+        maxID++;
+        sqlite3_finalize(statement);
+        int lastOrder=0;
+        sqlStr= "SELECT MAX(int_SortOrder) FROM data_Rhythm;";
+        if(sqlite3_prepare_v2(database, sqlStr, -1, &statement, NULL) == SQLITE_OK) {
+            int result = sqlite3_step(statement);
+            if(result == SQLITE_ROW){
+                lastOrder = sqlite3_column_int(statement, 0);
+            }else{
+                lastOrder = 0;
+            }
+        }
+        lastOrder++;
+        sqlite3_finalize(statement);
+        sql=[[NSString stringWithFormat: @"INSERT INTO data_Rhythm (int_RhythmID,txt_Title,int_SortOrder,int_tempo) VALUES (%d,'%@',%d, %d);",maxID,strTitle,lastOrder, intTempo] cStringUsingEncoding:NSUTF8StringEncoding];
+        sqlite3_exec( database, sql, 0, 0, NULL );
+    }
+    sqlite3_close( database );
+    
+    applicationDelegate = nil;
+
+}
+
+- (void)updateItemWithTempo:(int)intTempo andTitle:(NSString *)strTitle withItemID:(NSInteger)intEditingID{
+    AppDelegate *applicationDelegate;
+    applicationDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    sqlite3 *database;
+    if (sqlite3_open([applicationDelegate.dbpath UTF8String], &database) == SQLITE_OK) {
+        const char *sql;
+        sql=[[NSString stringWithFormat: @"UPDATE data_Rhythm SET txt_Title = '%@', int_tempo = %d WHERE int_RhythmID = %ld;",strTitle, intTempo, intEditingID] cStringUsingEncoding:NSUTF8StringEncoding];
+        sqlite3_exec( database, sql, 0, 0, NULL );
+    }
+    sqlite3_close( database );
+    
+    applicationDelegate = nil;
 }
 
 - (NSInteger)primaryKey {

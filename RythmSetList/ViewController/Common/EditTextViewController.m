@@ -129,6 +129,14 @@
 
 #pragma mark -
 #pragma mark 変数
+- (NSInteger)intEditID {
+    return intEditID;
+}
+
+- (void)setntEditID:(NSInteger)aInt {
+    if ((!intEditID && !aInt) || (intEditID == aInt)) return;
+    intEditID = aInt;
+}
 
 - (NSString *)strText {
     return strText;

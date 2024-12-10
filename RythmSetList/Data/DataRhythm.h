@@ -29,4 +29,10 @@
 - (id)initWithPrimaryKey:(NSInteger)pk database:(sqlite3 *)db withAllType:(NSInteger)allType;
 
 - (void)deleteFromDatabaseDatabase:(sqlite3 *)db;
+
+- (NSMutableArray *)getSongList;
+
+- (void)addItemWithTempo:(int)intTempo andTitle:(NSString *)strTitle;
+- (void)updateItemWithTempo:(int)intTempo andTitle:(NSString *)strTitle withItemID:(NSInteger)intEditingID;
+
 @end

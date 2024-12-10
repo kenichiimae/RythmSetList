@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol EditTextViewControllerDelegate; // forward declaration
 @interface EditTextViewController : UIViewController{
+    NSInteger intEditID;
     NSString *strTitle;
     NSString *strText;
     NSString *strTitle2;
@@ -20,8 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
     NSString *strPlaceHolder2;  //とりあえずシングルテキストだけ
     BOOL flgAddNew;
     BOOL flgCantClose;
+    
 }
 @property (nonatomic, assign) id <EditTextViewControllerDelegate>    delegate;
+@property (nonatomic) NSInteger intEditID;
 @property (copy, nonatomic) NSString *strTitle;
 @property (copy, nonatomic) NSString *strText;
 @property (copy, nonatomic) NSString *strTitle2;
