@@ -19,7 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
     NSString *strText2;
     NSString *strPlaceHolder;  //とりあえずシングルテキストだけ
     NSString *strPlaceHolder2;  //とりあえずシングルテキストだけ
-    BOOL flgAddNew;
     BOOL flgCantClose;
     
 }
@@ -31,7 +30,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy, nonatomic) NSString *strText2;
 @property (copy, nonatomic) NSString *strPlaceHolder;
 @property (copy, nonatomic) NSString *strPlaceHolder2;
-@property (nonatomic) BOOL flgAddNew;
 @property (nonatomic) BOOL flgCantClose;
 
 @end

@@ -75,7 +75,7 @@
     arrSongs = [cDts getSongList];
     [tblMain reloadData];
     if (intSelectedTableRowNo == -1) {
-        if ([arrSongs count] >= 0) {
+        if ([arrSongs count] > 0) {
             intSelectedTableRowNo = 0;
             [self selectedSongWithIndex:intSelectedTableRowNo];
         }
@@ -161,6 +161,9 @@
 
 //アクセサリーをタップすると、以下のUITableViewのデリゲートが呼ばれます。ここに詳細ビューへの切り替え処理を実装します。
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
+    if (flgTableEditing) {
+        return;
+    }
     DataRhythm *bookData = (DataRhythm *)[arrSongs objectAtIndex:indexPath.row];
     EditTextViewController *controller = [[UIStoryboard storyboardWithName:kSBCommon bundle:nil]instantiateViewControllerWithIdentifier:@"EditTextViewController"];
     controller.modalPresentationStyle = UIModalPresentationFullScreen;
@@ -241,7 +244,7 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     DataRhythm *bookData = (DataRhythm *)[arrSongs objectAtIndex:intRowNo];
     lblSongTitle.text = bookData.strTitle;
     lblTempo.text = [clsCalc strNumberWithValue:bookData.intTempo withKanma:YES forUnderPeriod:0];
-    NSIndexPath *idx = [[NSIndexPath alloc] initWithIndex:intSelectedTableRowNo];
+    NSIndexPath *idx = [NSIndexPath indexPathForRow:intSelectedTableRowNo inSection:0];
     [tblMain selectRowAtIndexPath:idx animated:NO scrollPosition:UITableViewScrollPositionTop];
 
     [self StopTimer];
@@ -326,7 +329,7 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath
             intSelectedTableRowNo ++;
             [self selectedSongWithIndex:intSelectedTableRowNo];
         }else{
-            intSelectedTempo = 0;
+            intSelectedTableRowNo = 0;
             [self selectedSongWithIndex:intSelectedTableRowNo];
         }
     }

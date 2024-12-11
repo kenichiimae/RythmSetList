@@ -42,7 +42,7 @@
                                             <constraint firstAttribute="height" constant="34" id="Ae2-gY-3Vf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                         <connections>
                                             <action selector="finishEditSingle:" destination="WqE-fI-UJW" eventType="editingDidEndOnExit" id="HZl-dU-Aqk"/>
                                         </connections>
@@ -80,7 +80,7 @@
                                             <constraint firstAttribute="height" constant="34" id="0Qx-XK-V80"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                         <connections>
                                             <action selector="finishEditSingle:" destination="WqE-fI-UJW" eventType="editingDidEndOnExit" id="fyq-Sa-Vrv"/>
                                         </connections>
@@ -131,7 +131,9 @@
                     <connections>
                         <outlet property="btnRegister" destination="QLS-qA-kxg" id="duu-up-BSM"/>
                         <outlet property="lblTitle" destination="aqx-SQ-kK1" id="JqJ-0V-nxv"/>
+                        <outlet property="lblTitle2" destination="u7h-ay-lG3" id="2tD-AY-AA9"/>
                         <outlet property="txtSingle" destination="uSg-l2-2zi" id="hEO-aL-fIj"/>
+                        <outlet property="txtSingle2" destination="Vqi-NK-4uf" id="Tr5-5j-bwe"/>
                         <outlet property="viewMain" destination="f4i-K2-jtG" id="v5v-Mw-vdg"/>
                         <outlet property="viewTopSafeSpace" destination="Kvf-Ue-wlp" id="uWo-HC-R7y"/>
                     </connections>

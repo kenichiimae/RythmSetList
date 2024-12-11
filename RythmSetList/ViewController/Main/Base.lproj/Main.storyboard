@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1032" height="1376"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,6 +133,10 @@
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="Od0-wl-6mo"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="xYG-wT-5oE"/>
+                                        </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6e-s6-P2e">
                                         <rect key="frame" x="0.0" y="636" width="1032" height="636"/>
@@ -229,6 +233,8 @@
                         <outlet property="btnEdit" destination="EWa-45-a70" id="g6O-6v-5ea"/>
                         <outlet property="btnNextSong" destination="Cif-D8-sNU" id="470-Zk-3mT"/>
                         <outlet property="imgFlash" destination="x9v-zW-BWs" id="lya-Np-o7v"/>
+                        <outlet property="lblSongTitle" destination="clS-5e-ZMe" id="gZX-qj-jMs"/>
+                        <outlet property="lblTempo" destination="RsH-Eq-UfU" id="gcv-eB-UAc"/>
                         <outlet property="tblMain" destination="FTI-fu-kLk" id="unm-Jm-nYy"/>
                     </connections>
                 </viewController>

@@ -51,7 +51,7 @@
     txtSingle2.text = strText2;
     txtSingle2.placeholder = strPlaceHolder2;
 
-    if (flgAddNew){
+    if (intEditID == 0){
         [btnRegister setTitle:NSLocalizedString(@"register", @"") forState:UIControlStateNormal];
     }else{
         [btnRegister setTitle:NSLocalizedString(@"update", @"") forState:UIControlStateNormal];
@@ -73,6 +73,7 @@
 
     } completion:^(BOOL finished){
         if (finished) {
+            [self->txtSingle becomeFirstResponder];
         }
     }];
 
@@ -102,8 +103,12 @@
 
 #pragma mark -
 #pragma mark シングルテキストの完了
-- (IBAction)finishEditSingle:(id)sender{
-    
+- (IBAction)firstEdited:(id)sender{
+    [txtSingle2 becomeFirstResponder];
+}
+
+- (IBAction)secondEdited:(id)sender{
+    [txtSingle2 resignFirstResponder];
 }
 
 
@@ -133,7 +138,7 @@
     return intEditID;
 }
 
-- (void)setntEditID:(NSInteger)aInt {
+- (void)setIntEditID:(NSInteger)aInt {
     if ((!intEditID && !aInt) || (intEditID == aInt)) return;
     intEditID = aInt;
 }
@@ -196,15 +201,6 @@
     if ((!strPlaceHolder2 && !aString) || (strPlaceHolder2 && aString && [strPlaceHolder2 isEqualToString:aString])) return;
     strPlaceHolder2 = nil;
     strPlaceHolder2 = [aString copy];
-}
-
-- (BOOL)flgAddNew {
-    return flgAddNew;
-}
-
-- (void)setFlgAddNew:(BOOL)aBool {
-    if ((!flgAddNew && !aBool) || (flgAddNew == aBool)) return;
-    flgAddNew = aBool;
 }
 
 - (BOOL)flgCantClose {

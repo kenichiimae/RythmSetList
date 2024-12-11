@@ -35,7 +35,7 @@
      self.window.rootViewController = self.mainView_iPad;
      }
      */
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.viewController = [[UIStoryboard storyboardWithName:kSBMain bundle:nil]instantiateViewControllerWithIdentifier:@"ViewController"];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
