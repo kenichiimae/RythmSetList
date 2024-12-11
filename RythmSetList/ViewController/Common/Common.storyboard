@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -44,7 +45,7 @@
                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                         <connections>
-                                            <action selector="finishEditSingle:" destination="WqE-fI-UJW" eventType="editingDidEndOnExit" id="HZl-dU-Aqk"/>
+                                            <action selector="firstEdited:" destination="WqE-fI-UJW" eventType="editingDidEndOnExit" id="vPc-6W-XZU"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLS-qA-kxg">
@@ -82,7 +83,7 @@
                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                         <connections>
-                                            <action selector="finishEditSingle:" destination="WqE-fI-UJW" eventType="editingDidEndOnExit" id="fyq-Sa-Vrv"/>
+                                            <action selector="secondEdited:" destination="WqE-fI-UJW" eventType="editingDidEndOnExit" id="Krp-h5-uCr"/>
                                         </connections>
                                     </textField>
                                 </subviews>
