@@ -156,6 +156,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    intSelectedTableRowNo = (int)indexPath.row;
     [self selectedSongWithIndex:indexPath.row];
 }
 
